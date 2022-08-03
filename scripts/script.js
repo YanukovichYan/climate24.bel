@@ -3,33 +3,57 @@
 window.onload = function () {
 
 
-    // let listItems = document.querySelectorAll('.shops-menu ul li');
+    // let listItems = document.getElementsByClassName('w');
+    //
+    // let one = document.getElementsByClassName('one');
+    // // console.log(one);
+    // let idx = null;
+    // console.log(listItems);
+    // console.log(one);
+
+
+
+    // for (let i = 0; i < one.length; i++) {
+    //     one[i].onclick = function (e) {
+    //
+    //         idx = i;
+    //
+    //         listItems[idx].classList.add('active-color');
+    //         one[idx].classList.add('active');
     //
     //
-    // for (let i = 0; i < listItems.length; i++) {
-    //     if (listItems[i].classList.contains('active')) {
-    //         listItems[i].classList.remove('active');
+    //         if (one[i].classList.contains('active')) {
+    //             one[i].classList.remove('one');
+    //         }
+    //         e.target.classList.add('active');
+    //
     //     }
+
+        // for (let i = 0; i < listItems.length; i++) {
+        //     if (listItems[i].classList.contains('active')) {
+        //         listItems[i].classList.remove('active');
+        //     }
+        // }
+        //
+        // e.stopPropagation();
     // }
-    // e.target.classList.add('active');
-    // e.stopPropagation();
 
     let firstCity = document.getElementById('first-city'),
         secondCity = document.getElementById('second-city'),
         thirdCity = document.getElementById('third-city'),
         fourthCity = document.getElementById('fourth-city'),
 
-        // map = document.getElementsByClassName('map')[0],
+        // map = document.getElementsByClassName('map'),
         map_1 = document.getElementsByClassName('map-1')[0],
         map_2 = document.getElementsByClassName('map-2')[0],
         map_3 = document.getElementsByClassName('map-3')[0],
         map_4 = document.getElementsByClassName('map-4')[0],
-
         one = document.getElementsByClassName('one')[0],
         two = document.getElementsByClassName('two')[0],
         three = document.getElementsByClassName('three')[0],
         four = document.getElementsByClassName('four')[0];
 
+    // console.log(map);
 
     one.onclick = function () {
         map_2.style.display = 'none';
@@ -107,51 +131,50 @@ window.onload = function () {
             price: 50.50,
             priceDiscount: 44.50,
             discountPercent: 50,
-            imgProduct: 'src="images/rating-1.png',
+            imgProduct: 'images/rating-1.png',
             description: '2'
         },
         {
-            nameProduct: 'Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...',
+            nameProduct: 'Молоко Простоквашино паст. питьевое цельное отборное...',
             price: 50.50,
             priceDiscount: 44.50,
             discountPercent: 50,
-            imgProduct: 'src="images/rating-2.png',
+            imgProduct: 'images/rating-2.png',
             description: '3'
         },
         {
-            nameProduct: 'Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...',
+            nameProduct: 'Колбаса сырокопченая Мясная История Сальчичон и Тоскан...',
             price: 50.50,
             priceDiscount: 44.50,
             discountPercent: 50,
-            imgProduct: 'src="images/rating-3.png',
+            imgProduct: 'images/rating-3.png',
             description: '5'
         },
         {
-            nameProduct: 'Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...',
+            nameProduct: 'Сосиски вареные Мясная История Молочные и С сыро...',
             price: 50.50,
             priceDiscount: 44.50,
             discountPercent: 50,
-            imgProduct: 'src="images/rating-4.png',
+            imgProduct: 'images/rating-4.png',
             description: '4'
         },
     ]
-
 
     let btn = document.getElementsByClassName('btn');
 
     for (let i = 0; i < btn.length; i++) {
         btn[i].onclick = function (e) {
 
-            let product = $(e.target).siblings('.item-text').text();
+            let idx = null;
+            idx = i;
+            let product = btn[i];
 
-            let string = '•    ' + product.slice(0, 20) + '...';
-
+            let string = '•    ' + products[idx].nameProduct.slice(0, 20) + '...';
             let title = document.getElementsByClassName('purchases-title')[0];
 
             let div = document.createElement('div');
             div.className = "product";
             div.innerHTML = string;
-
             title.after(div);
 
             let prd = document.getElementsByClassName('product')[0];
