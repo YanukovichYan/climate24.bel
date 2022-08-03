@@ -1,0 +1,126 @@
+@media screen and (max-width: 1260px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .header .container {
+        max-width: 644px;
+    }
+
+    .main-items {
+        max-width: 644px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 272px 272px;
+        grid-gap: 50px 100px;
+    }
+
+    .purchases .container ul li {
+        justify-content: center;
+    }
+
+
+    .purchases-title {
+        text-align: center;
+    }
+
+    .special-offers-title {
+        text-align: center;
+    }
+
+    .discount-items {
+        flex-direction: column;
+    }
+
+    .discount-card {
+        margin-bottom: 50px;
+    }
+
+    .shops-title {
+        text-align: center;
+    }
+
+    .shops-menu ul {
+        justify-content: center;
+    }
+
+    .header .container {
+        align-items: center;
+    }
+
+    .btn-all-promo {
+        margin-top: 0;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .main-items {
+        max-width: 574px;
+        grid-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+
+    .discount-card {
+        flex-direction: column;
+        width: 290px;
+        height: 380px;
+        padding: 7px;
+        justify-content: unset;
+    }
+
+    .discount-card-second {
+        background-color: #E5FFDE;
+        background-image: unset;
+    }
+
+    .discount-card-second .discount-info {
+        margin-bottom: 30px;
+    }
+
+    .discount-info {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+    .main-items {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .map {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .promo {
+        font-size: 27px;
+    }
+
+    .purchases-title {
+        font-size: 27px;
+    }
+
+    .shops-title {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .shops-menu ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+
+    .shops-menu ul li {
+        margin-right: 0;
+    }
+}
