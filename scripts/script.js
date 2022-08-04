@@ -2,127 +2,34 @@
 
 window.onload = function () {
 
+    let listItems = document.getElementsByClassName('w');
 
-    // let listItems = document.getElementsByClassName('w');
-    //
-    // let one = document.getElementsByClassName('one');
-    // // console.log(one);
-    // let idx = null;
-    // console.log(listItems);
-    // console.log(one);
+    let one = document.getElementsByClassName('one');
 
+    let map = document.getElementsByClassName('map');
 
+    let idx = null;
 
-    // for (let i = 0; i < one.length; i++) {
-    //     one[i].onclick = function (e) {
-    //
-    //         idx = i;
-    //
-    //         listItems[idx].classList.add('active-color');
-    //         one[idx].classList.add('active');
-    //
-    //
-    //         if (one[i].classList.contains('active')) {
-    //             one[i].classList.remove('one');
-    //         }
-    //         e.target.classList.add('active');
-    //
-    //     }
+    function color() {
+        one[idx].classList.add('active');
+        listItems[idx].classList.add('active-color');
+        map[idx].classList.add('map-1');
+    }
 
-        // for (let i = 0; i < listItems.length; i++) {
-        //     if (listItems[i].classList.contains('active')) {
-        //         listItems[i].classList.remove('active');
-        //     }
-        // }
-        //
-        // e.stopPropagation();
-    // }
+    for (let i = 0; i < one.length; i++) {
+        one[i].onclick = function () {
 
-    let firstCity = document.getElementById('first-city'),
-        secondCity = document.getElementById('second-city'),
-        thirdCity = document.getElementById('third-city'),
-        fourthCity = document.getElementById('fourth-city'),
-
-        // map = document.getElementsByClassName('map'),
-        map_1 = document.getElementsByClassName('map-1')[0],
-        map_2 = document.getElementsByClassName('map-2')[0],
-        map_3 = document.getElementsByClassName('map-3')[0],
-        map_4 = document.getElementsByClassName('map-4')[0],
-        one = document.getElementsByClassName('one')[0],
-        two = document.getElementsByClassName('two')[0],
-        three = document.getElementsByClassName('three')[0],
-        four = document.getElementsByClassName('four')[0];
-
-    // console.log(map);
-
-    one.onclick = function () {
-        map_2.style.display = 'none';
-        map_3.style.display = 'none';
-        map_4.style.display = 'none';
-        map_1.style.display = 'block';
-
-        firstCity.classList.add('active-color');
-        secondCity.classList.remove('active-color');
-        thirdCity.classList.remove('active-color');
-        fourthCity.classList.remove('active-color');
-
-        one.classList.add('active');
-        two.classList.remove('active');
-        three.classList.remove('active');
-        four.classList.remove('active');
-    };
-
-    two.onclick = function () {
-        map_1.style.display = 'none';
-        map_3.style.display = 'none';
-        map_4.style.display = 'none';
-        map_2.style.display = 'block';
-
-        secondCity.classList.add('active-color');
-        firstCity.classList.remove('active-color');
-        thirdCity.classList.remove('active-color');
-        fourthCity.classList.remove('active-color');
-
-        two.classList.add('active');
-        one.classList.remove('active');
-        three.classList.remove('active');
-        four.classList.remove('active');
-
-    };
-
-    three.onclick = function () {
-        map_1.style.display = 'none';
-        map_2.style.display = 'none';
-        map_3.style.display = 'none';
-        map_3.style.display = 'block';
-
-        thirdCity.classList.add('active-color');
-        firstCity.classList.remove('active-color');
-        secondCity.classList.remove('active-color');
-        fourthCity.classList.remove('active-color');
-
-        three.classList.add('active');
-        one.classList.remove('active');
-        two.classList.remove('active');
-        four.classList.remove('active');
-    };
-
-    four.onclick = function () {
-        map_1.style.display = 'none';
-        map_2.style.display = 'none';
-        map_3.style.display = 'none';
-        map_4.style.display = 'block';
-
-        fourthCity.classList.add('active-color');
-        firstCity.classList.remove('active-color');
-        secondCity.classList.remove('active-color');
-        thirdCity.classList.remove('active-color');
-
-        four.classList.add('active');
-        one.classList.remove('active');
-        two.classList.remove('active');
-        three.classList.remove('active');
-    };
+            for (let i = 0; i < one.length; i++) {
+                for (let i = 0; i < one.length; i++) {
+                    listItems[i].classList.remove('active-color');
+                    one[i].classList.remove('active');
+                    map[i].classList.remove('map-1');
+                }
+            }
+            idx = i;
+            color();
+        }
+    }
 
 
     const products = [

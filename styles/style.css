@@ -304,22 +304,9 @@ body {
     color: #FFFFFF;
 }
 
-.shops-menu ul li:hover #first-city  {
+.shops-menu ul li:hover a {
     color: #FFFFFF;
 }
-
-.shops-menu ul li:hover #second-city  {
-    color: #FFFFFF;
-}
-
-.shops-menu ul li:hover #third-city  {
-    color: #FFFFFF;
-}
-
-.shops-menu ul li:hover #fourth-city  {
-    color: #FFFFFF;
-}
-
 
 .map {
     background-image: url("../images/map.png");
@@ -333,11 +320,16 @@ body {
     font-size: 50px;
     text-align: center;
     color: #414141;
-}
-
-.map-2,
-.map-3,
-.map-4 {
     display: none;
 }
+
+.map-1 {
+    display: block;
+}
+
+/*.map-2,*/
+/*.map-3,*/
+/*.map-4 {*/
+/*    display: none;*/
+/*}*/
 
