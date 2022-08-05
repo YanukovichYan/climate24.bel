@@ -2,28 +2,25 @@
 
 window.onload = function () {
 
-    let listItems = document.getElementsByClassName('w');
-
-    let one = document.getElementsByClassName('one');
-
-    let map = document.getElementsByClassName('map');
-
-    let idx = null;
+    let city = document.getElementsByClassName('city'),
+        cityStr = document.getElementsByClassName('city-str'),
+        map = document.getElementsByClassName('map'),
+        idx = null;
 
     function color() {
-        one[idx].classList.add('active');
-        listItems[idx].classList.add('active-color');
-        map[idx].classList.add('map-1');
+        cityStr[idx].classList.add('active');
+        city[idx].classList.add('active-color');
+        map[idx].classList.add('map-change');
     }
 
-    for (let i = 0; i < one.length; i++) {
-        one[i].onclick = function () {
+    for (let i = 0; i < cityStr.length; i++) {
+        cityStr[i].onclick = function () {
 
-            for (let i = 0; i < one.length; i++) {
-                for (let i = 0; i < one.length; i++) {
-                    listItems[i].classList.remove('active-color');
-                    one[i].classList.remove('active');
-                    map[i].classList.remove('map-1');
+            for (let i = 0; i < cityStr.length; i++) {
+                for (let i = 0; i < cityStr.length; i++) {
+                    city[i].classList.remove('active-color');
+                    cityStr[i].classList.remove('active');
+                    map[i].classList.remove('map-change');
                 }
             }
             idx = i;
@@ -38,7 +35,7 @@ window.onload = function () {
             price: 50.50,
             priceDiscount: 44.50,
             discountPercent: 50,
-            imgProduct: 'images/rating-1.png',
+            imgProduct: '../images/rating-1.png',
             description: '2'
         },
         {
@@ -46,7 +43,7 @@ window.onload = function () {
             price: 50.50,
             priceDiscount: 44.50,
             discountPercent: 50,
-            imgProduct: 'images/rating-2.png',
+            imgProduct: '../images/rating-1.png',
             description: '3'
         },
         {
@@ -54,7 +51,7 @@ window.onload = function () {
             price: 50.50,
             priceDiscount: 44.50,
             discountPercent: 50,
-            imgProduct: 'images/rating-3.png',
+            imgProduct: '../images/rating-1.png',
             description: '5'
         },
         {
@@ -62,7 +59,7 @@ window.onload = function () {
             price: 50.50,
             priceDiscount: 44.50,
             discountPercent: 50,
-            imgProduct: 'images/rating-4.png',
+            imgProduct: '../images/rating-1.png',
             description: '4'
         },
     ]
