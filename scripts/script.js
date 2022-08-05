@@ -59,7 +59,7 @@ window.onload = function () {
             price: 50.50,
             priceDiscount: 44.50,
             discountPercent: 50,
-            imgProduct: '../images/rating-1.png',
+            imgProduct: 'images/rating-4.png',
             description: '4'
         },
     ]

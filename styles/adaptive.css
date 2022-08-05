@@ -52,8 +52,21 @@
     .btn-all-promo {
         margin-top: 0;
     }
+
+    .purchases .container {
+        max-width: 574px;
+    }
 }
 
+@media screen and (max-width: 767px) {
+    .main {
+        padding-bottom: 70px;
+    }
+
+    .special-offers {
+        padding: 86px 0 70px 0;
+    }
+}
 
 @media screen and (max-width: 700px) {
     .main-items {
