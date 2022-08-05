@@ -73,7 +73,7 @@ window.onload = function () {
             idx = i;
             let product = btn[i];
 
-            let string = '•    ' + products[idx].nameProduct.slice(0, 20) + '...';
+            let string = '•' + '   ' + products[idx].nameProduct.slice(0, 20) + '...';
             let title = document.getElementsByClassName('purchases-title')[0];
 
             let div = document.createElement('div');

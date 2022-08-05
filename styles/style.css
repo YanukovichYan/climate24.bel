@@ -180,10 +180,10 @@ body {
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .close {
-    /*display: none;*/
     margin-left: 16px;
     cursor: pointer;
 }
